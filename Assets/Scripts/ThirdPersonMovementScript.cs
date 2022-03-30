@@ -12,7 +12,10 @@ public class ThirdPersonMovementScript : MonoBehaviour
 
     public float groundDistance = 0.4f;
     public float turnSmoothTime = 0.1f;
-    public float speed = 6f;
+
+    public float speed;
+    public float sprintSpeed;
+
     public float gravity = -9.81f;
     public float jumpHeight = 1f;
 
@@ -20,9 +23,16 @@ public class ThirdPersonMovementScript : MonoBehaviour
 
     float turnSmoothVelocity;
 
-    // Update is called once per frame
+
+     void Start()
+    {
+        speed = 6f;
+        sprintSpeed = 10f;
+    }
+
     void Update()
     {
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
         if (isGrounded && velocity.y < 0)
@@ -30,8 +40,7 @@ public class ThirdPersonMovementScript : MonoBehaviour
             velocity.y = -2f;
         }
 
-
-
+        // Player Movement code
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -47,7 +56,19 @@ public class ThirdPersonMovementScript : MonoBehaviour
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
 
 
-        } 
+        }
+
+        // Sprint code
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = sprintSpeed;
+        } else
+        {
+            speed = 6f;
+        }
+
+        // Jump code
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
