@@ -14,10 +14,9 @@ public class ThirdPersonMovementScript : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float speed = 6f;
     public float gravity = -9.81f;
-    public float jumpHeight = 3f;
+    public float jumpHeight = 1f;
 
-    bool isGrounded;
-    //bool isSprinting = false;
+    private bool isGrounded;
 
     float turnSmoothVelocity;
 
