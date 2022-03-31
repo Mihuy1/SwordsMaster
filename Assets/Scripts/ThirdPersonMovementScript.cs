@@ -47,7 +47,7 @@ public class ThirdPersonMovementScript : MonoBehaviour
         SceneManager.LoadScene("Main Scene");
     }
 
-     void Start()
+    void Start()
     {
         speed = 6f;
         sprintSpeed = 10f;
@@ -55,6 +55,12 @@ public class ThirdPersonMovementScript : MonoBehaviour
         currentHealth = maxHealth;
 
         healthbar.SetMaxHealth(maxHealth);
+
+
+        // Cursr lock.
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     void Update()
