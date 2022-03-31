@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ThirdPersonMovementScript : MonoBehaviour
 {
@@ -19,19 +20,50 @@ public class ThirdPersonMovementScript : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 1f;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+
     private bool isGrounded;
 
     float turnSmoothVelocity;
 
+    public HealthBar healthbar;
+
+
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthbar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        SceneManager.LoadScene("Main Scene");
+    }
 
      void Start()
     {
         speed = 6f;
         sprintSpeed = 10f;
+
+        currentHealth = maxHealth;
+
+        healthbar.SetMaxHealth(maxHealth);
     }
 
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            TakeDamage(20);
+        }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
