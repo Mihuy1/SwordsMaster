@@ -19,7 +19,7 @@ public class EnemyHealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetMouseButtonDown(0))
         {
             TakeDamage(50);
             Debug.Log("Enemy has taken damage!");
