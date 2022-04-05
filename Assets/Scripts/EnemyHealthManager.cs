@@ -9,8 +9,6 @@ public class EnemyHealthManager : MonoBehaviour
     public int maxHealth = 100;
     public int currenthealth;
 
-    public Canvas canvas;
-
     public HealthBar healthbar;
 
     // Start is called before the first frame update
