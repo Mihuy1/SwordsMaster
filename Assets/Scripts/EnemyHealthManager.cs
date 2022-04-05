@@ -8,7 +8,7 @@ public class EnemyHealthManager : MonoBehaviour
     public int maxHealth = 100;
     public int currenthealth;
 
-    public GameObject enemy;
+    public HealthBar healthbar;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,7 @@ public class EnemyHealthManager : MonoBehaviour
 
      void Die()
     {
-        GameObject.Destroy(enemy);
+        Destroy(gameObject);
         Debug.Log("Enemy died!");
     }
 
