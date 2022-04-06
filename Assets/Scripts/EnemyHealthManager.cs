@@ -92,7 +92,7 @@ public class EnemyHealthManager : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject);
         Debug.Log("+10 XP!");
     }
 }
