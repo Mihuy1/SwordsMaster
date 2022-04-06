@@ -12,6 +12,7 @@ public class EnemyHealthManager : MonoBehaviour
     private Transform target;
     public float speed = 5f;
     public float stoppingDistance;
+    public float range;
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
@@ -53,7 +54,10 @@ public class EnemyHealthManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            TakeDamage(15);
+            if (Vector3.Distance(transform.position, target.position) < range)
+            {
+                TakeDamage(15);
+            }
         }
     }
 

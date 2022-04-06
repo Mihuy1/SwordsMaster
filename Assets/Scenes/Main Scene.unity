@@ -5963,6 +5963,7 @@ MonoBehaviour:
   currenthealth: 0
   speed: 5
   stoppingDistance: 2
+  range: 10
   startTimeBtwAttack: 1
   _player: {fileID: 194123744}
   healthbar: {fileID: 1648764080}
