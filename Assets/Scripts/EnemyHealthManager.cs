@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class EnemyHealthManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class EnemyHealthManager : MonoBehaviour
     public int currenthealth;
 
     private Transform target;
+    public NavMeshAgent agent;
+
     public float speed = 5f;
     public float stoppingDistance;
     public float range;
@@ -37,16 +40,18 @@ public class EnemyHealthManager : MonoBehaviour
 
     public void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(dir);
-        transform.rotation = rotation;
+        agent.SetDestination(target.position);
 
-        if (Vector3.Distance(transform.position, target.position) > stoppingDistance)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }
+        //Vector3 dir = target.position - transform.position;
+        //Quaternion rotation = Quaternion.LookRotation(dir);
+        //transform.rotation = rotation;
 
-        else if (Vector3.Distance(transform.position, target.position) < stoppingDistance)
+            //if (Vector3.Distance(transform.position, target.position) > stoppingDistance)
+            //{
+            //    transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            //}
+
+         if (Vector3.Distance(transform.position, target.position) < stoppingDistance)
         {
             transform.position = this.transform.position;
             Attack();
@@ -63,8 +68,6 @@ public class EnemyHealthManager : MonoBehaviour
 
     public void Attack()
     {
-
-
         if (timeBtwAttack <= 0)
         {
             _player.TakeDamage(20);

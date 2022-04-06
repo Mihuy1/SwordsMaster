@@ -30,7 +30,6 @@ public class ThirdPersonMovementScript : MonoBehaviour
     public HealthBar healthbar;
 
 
-
     void Update()
     {
 
