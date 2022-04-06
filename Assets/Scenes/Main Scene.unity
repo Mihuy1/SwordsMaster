@@ -1520,34 +1520,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
   m_PrefabInstance: {fileID: 194123740}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &194123742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194123741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33337b7f60c58f443a4a591cf1ff55f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyhealthmanager: {fileID: 0}
---- !u!114 &194123743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194123741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33337b7f60c58f443a4a591cf1ff55f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemyhealthmanager: {fileID: 0}
 --- !u!114 &194123744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2965,7 +2937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6880901488789346670, guid: 8b0ed2bc94ddb3b43866e9d4f3f135d9, type: 3}
       propertyPath: m_Name
-      value: PT_Lowpoly_Medieval_Armors_Male_Moduar_Free_pack
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880901488789346670, guid: 8b0ed2bc94ddb3b43866e9d4f3f135d9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7547120569579164003, guid: 8b0ed2bc94ddb3b43866e9d4f3f135d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5986,9 +5962,8 @@ MonoBehaviour:
   maxHealth: 100
   currenthealth: 0
   speed: 5
-  stoppingDistance: 5
+  stoppingDistance: 2
   startTimeBtwAttack: 1
-  damage: 5
   _player: {fileID: 194123744}
   healthbar: {fileID: 1648764080}
 --- !u!1 &1003014869

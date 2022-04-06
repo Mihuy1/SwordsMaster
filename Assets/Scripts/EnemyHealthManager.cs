@@ -16,8 +16,6 @@ public class EnemyHealthManager : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
-    public int damage = 1;
-
     public ThirdPersonMovementScript _player;
     public HealthBar healthbar;
 
@@ -28,7 +26,7 @@ public class EnemyHealthManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
 
         currenthealth = maxHealth;
@@ -36,8 +34,7 @@ public class EnemyHealthManager : MonoBehaviour
         healthbar.SetMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
         Vector3 dir = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(dir);
@@ -53,13 +50,20 @@ public class EnemyHealthManager : MonoBehaviour
             transform.position = this.transform.position;
             Attack();
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            TakeDamage(15);
+        }
     }
 
     public void Attack()
     {
+
+
         if (timeBtwAttack <= 0)
         {
-            _player.TakeDamage(10);
+            _player.TakeDamage(20);
             /*healthbar.SetHealth(_player.currentHealth);*/
             Debug.Log("Attacking");
 
@@ -74,18 +78,17 @@ public class EnemyHealthManager : MonoBehaviour
     {
         currenthealth -= damage;
         healthbar.SetHealth(currenthealth);
-        
+
         if (currenthealth <= 0)
         {
             Die();
         }
 
-    }
+}
 
-     void Die()
+    public void Die()
     {
-        Destroy(gameObject);
-        Debug.Log("Enemy died!");
+        Destroy(gameObject, 1.5f);
+        Debug.Log("+10 XP!");
     }
-
 }

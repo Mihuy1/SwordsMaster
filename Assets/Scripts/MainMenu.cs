@@ -7,7 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     private void Start()
     {
+        // Make sure cursor is unlocked and visible.
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void PlayGame ()
