@@ -31,7 +31,7 @@ public class ThirdPersonMovementScript : MonoBehaviour
 
 
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
@@ -44,7 +44,7 @@ public class ThirdPersonMovementScript : MonoBehaviour
 
     public void Die()
     {
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene("Main Menu");
     }
 
     void Start()
@@ -55,11 +55,6 @@ public class ThirdPersonMovementScript : MonoBehaviour
         currentHealth = maxHealth;
 
         healthbar.SetMaxHealth(maxHealth);
-
-
-        // Cursr lock.
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
