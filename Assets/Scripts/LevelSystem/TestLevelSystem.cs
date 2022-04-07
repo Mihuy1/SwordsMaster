@@ -10,11 +10,5 @@ public class TestLevelSystem : MonoBehaviour
     {
         LevelSystem levelSystem = new LevelSystem();
         xpBar.SetLevelSystem(levelSystem);
-
-        //Debug.Log(levelSystem.GetLevelNumber());
-        //levelSystem.AddExperience(50);
-        //Debug.Log(levelSystem.GetLevelNumber());
-        //levelSystem.AddExperience(60);
-        //Debug.Log(levelSystem.GetLevelNumber());
     }
 }

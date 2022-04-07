@@ -5,27 +5,18 @@ using TMPro;
 
 public class AddCoins : MonoBehaviour
 {
+
     [SerializeField] private EnemyController enemyController;
 
     [SerializeField] private TextMeshProUGUI coinAmountText;
-    [SerializeField] private int coins;
 
-    private void Awake()
-    {
-        coins = 0;
-
-        SetCoinAmount();
-    }
-
-    public void SetCoinAmount()
-    {
-        coinAmountText.text = "" + coins;
-    }
+    
 
     public void AddingCoins()
     {
-        GameManager.Instance.coins += coins;
-
-        coinAmountText.text = "" + coins;
+        GameManager.Instance.coins += GameManager.Instance.rewardAmount;
+        GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
+        Debug.Log(GameManager.Instance.coins);
     }
+
 }

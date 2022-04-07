@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
-
+using TMPro;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private XPBar xp;
     [SerializeField] private ThirdPersonMovementScript _player;
     [SerializeField] private HealthBar healthbar;
     [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private AddCoins coinManager;
-    
+
+    public AddCoins coinManager;
     private Transform target;
 
     public int maxHealth = 100;
@@ -25,9 +25,6 @@ public class EnemyController : MonoBehaviour
 
     private float timeBtwAttack;
 
-    [SerializeField] private int killReward;
-
-    // Start is called before the first frame update
     public void Start()
     {
         currenthealth = maxHealth;
@@ -35,8 +32,6 @@ public class EnemyController : MonoBehaviour
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         timeBtwAttack = startTimeBtwAttack;
-
-        killReward = 5;
 
     }
 
@@ -69,6 +64,7 @@ public class EnemyController : MonoBehaviour
 
         if (currenthealth <= 0)
         {
+            coinManager.AddingCoins();
             Die();
         }
 
@@ -78,11 +74,9 @@ public class EnemyController : MonoBehaviour
     {
         Destroy(gameObject);
         xp.levelSystem.AddExperience(65);
-        currenthealth = maxHealth;
-        _player.healthbar.SetHealth(currenthealth);
+        //currenthealth = maxHealth;
+        //_player.healthbar.SetHealth(currenthealth);
 
-        GameManager.Instance.coins += killReward;
-        coinManager.AddingCoins();
     }
 
     public void Attack()
