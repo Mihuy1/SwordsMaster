@@ -11,6 +11,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private ThirdPersonMovementScript _player;
     [SerializeField] private HealthBar healthbar;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private AddCoins coinManager;
+    
     private Transform target;
 
     public int maxHealth = 100;
@@ -23,6 +25,8 @@ public class EnemyController : MonoBehaviour
 
     private float timeBtwAttack;
 
+    [SerializeField] private int killReward;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -31,6 +35,9 @@ public class EnemyController : MonoBehaviour
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         timeBtwAttack = startTimeBtwAttack;
+
+        killReward = 5;
+
     }
 
     public void Update()
@@ -70,7 +77,12 @@ public class EnemyController : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        xp.levelSystem.AddExperience(100);
+        xp.levelSystem.AddExperience(65);
+        currenthealth = maxHealth;
+        _player.healthbar.SetHealth(currenthealth);
+
+        GameManager.Instance.coins += killReward;
+        coinManager.AddingCoins();
     }
 
     public void Attack()

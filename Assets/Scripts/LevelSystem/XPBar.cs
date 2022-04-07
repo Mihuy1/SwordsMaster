@@ -30,7 +30,7 @@ public class XPBar : MonoBehaviour
 
     public void SetLevelSystem(LevelSystem levelSystem)
     {
-        // Set the levelSystem objekt.
+        // Set the levelSystem object.
         this.levelSystem = levelSystem;
 
         // Update the starting values.
