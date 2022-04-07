@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
-public class EnemyHealthManager : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currenthealth;
@@ -18,6 +18,7 @@ public class EnemyHealthManager : MonoBehaviour
     private Transform target;
 
     public float range;
+    public float attackrange;
     public float startTimeBtwAttack;
     public float stoppingDistance;
 
@@ -49,7 +50,7 @@ public class EnemyHealthManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (Vector3.Distance(transform.position, target.position) < range)
+            if (Vector3.Distance(transform.position, target.position) < attackrange)
             {
                TakeDamage(15);
             }
@@ -71,6 +72,7 @@ public class EnemyHealthManager : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        _player.currentHealth += 25;
         Debug.Log("+10 XP!");
     }
 
