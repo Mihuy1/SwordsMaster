@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ThirdPersonMovementScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;

@@ -8,7 +8,7 @@ using TMPro;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private XPBar xp;
-    [SerializeField] private ThirdPersonMovementScript _player;
+    [SerializeField] private PlayerController _player;
     [SerializeField] private HealthBar healthbar;
     [SerializeField] private NavMeshAgent agent;
 
