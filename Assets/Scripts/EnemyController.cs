@@ -7,15 +7,14 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    [SerializeField] private XPBar xp;
+    [SerializeField] private ThirdPersonMovementScript _player;
+    [SerializeField] private HealthBar healthbar;
+    [SerializeField] private NavMeshAgent agent;
+    private Transform target;
+
     public int maxHealth = 100;
     public int currenthealth;
-
-    public ThirdPersonMovementScript _player;
-    public HealthBar healthbar;
-
-    public NavMeshAgent agent;
-
-    private Transform target;
 
     public float range;
     public float attackrange;
@@ -27,7 +26,6 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-
         currenthealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
 
@@ -72,8 +70,7 @@ public class EnemyController : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        _player.currentHealth += 25;
-        Debug.Log("+10 XP!");
+        xp.levelSystem.AddExperience(100);
     }
 
     public void Attack()
