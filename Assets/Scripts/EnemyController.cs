@@ -47,14 +47,6 @@ public class EnemyController : MonoBehaviour
             transform.position = this.transform.position;
             Attack();
         }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (Vector3.Distance(transform.position, target.position) < attackrange)
-            {
-               TakeDamage(15);
-            }
-        }
     }
 
         public void TakeDamage(int damage)

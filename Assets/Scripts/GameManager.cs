@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public int rewardAmount = 5;
     public int coins;
+    public int attackDamage = 20;
     public TextMeshProUGUI coinAmountText;
 
     void Awake()
