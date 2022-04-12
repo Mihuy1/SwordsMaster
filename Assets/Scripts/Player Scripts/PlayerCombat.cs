@@ -36,6 +36,7 @@ public class PlayerCombat : MonoBehaviour
                     //Attack();
                     animator.SetTrigger("Attack");
                     enemyController.TakeDamage(GameManager.Instance.attackDamage);
+                    nextAttackTime = Time.time + 1f / attackRate;
 
                 }
             }
