@@ -22,7 +22,7 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, Mathf.Infinity))
             {
-                if (Vector3.Distance(transform.position, enemy.transform.position) <= attackRange && enemy != null)
+                if (Vector3.Distance(transform.position, enemy.transform.position) <= attackRange)
                 {
                     //Attack();
                     animator.SetTrigger("Attack");

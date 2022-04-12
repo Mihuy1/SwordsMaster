@@ -65,7 +65,7 @@ public class EnemyController : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        xp.levelSystem.AddExperience(65);
+        xp.levelSystem.AddExperience(110);
 
         _player.currentHealth = 100;
         _player.healthbar.SetHealth(_player.currentHealth);

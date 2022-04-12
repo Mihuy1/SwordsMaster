@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     float turnSmoothVelocity;
 
     public HealthBar healthbar;
+    public Death deathScript;
+
+    public bool playerDied = false;
 
 
     void Update()
@@ -110,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        SceneManager.LoadScene("Main Menu");
+        deathScript.TurnOnScreen();
     }
 
 
