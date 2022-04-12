@@ -10,10 +10,18 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
     public EnemyController enemyController;
     public GameObject enemy;
+    public Transform player;
+
     public float attackRate = 2f;
     public float attackRange = 2f;
+    public float angle;
     float nextAttackTime = 0f;
 
+
+     void Start()
+    {
+        player = GetComponent<Transform>();
+    }
 
     void Update()
     {
@@ -22,13 +30,9 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, Mathf.Infinity))
             {
-                if (Vector3.Distance(transform.position, enemy.transform.position) <= attackRange)
-                {
                     //Attack();
                     animator.SetTrigger("Attack");
                     enemyController.TakeDamage(GameManager.Instance.attackDamage);
-                    nextAttackTime = Time.time + 1f / attackRate;
-                }
 
             }
         }
