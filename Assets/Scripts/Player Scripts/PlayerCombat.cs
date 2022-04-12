@@ -9,22 +9,25 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-
+    public EnemyController enemyController;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
-     void Update()
+    void Update()
     {
-        if(Time.time >= nextAttackTime)
+
+        if (Time.time >= nextAttackTime)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, Mathf.Infinity))
             {
-                Attack();
+                //Attack();
+                animator.SetTrigger("Attack");
+                enemyController.TakeDamage(GameManager.Instance.attackDamage);
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
- 
     }
+
 
     public void Attack()
     {
@@ -34,11 +37,12 @@ public class PlayerCombat : MonoBehaviour
         // Detect enemies in range of attack.
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
 
+
         // Damage enemies
-        foreach(Collider enemy in hitEnemies)
-        {
-            enemy.GetComponent<EnemyController>().TakeDamage(GameManager.Instance.attackDamage);
-        }
+        foreach (Collider enemy in hitEnemies)
+            {
+                enemy.GetComponent<EnemyController>().TakeDamage(GameManager.Instance.attackDamage);
+            }
 
     }
 
