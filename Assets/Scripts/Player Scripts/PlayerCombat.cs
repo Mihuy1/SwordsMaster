@@ -7,11 +7,13 @@ public class PlayerCombat : MonoBehaviour
     public Animator animator;
 
     public Transform attackPoint;
-    public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public EnemyController enemyController;
+    public GameObject enemy;
     public float attackRate = 2f;
+    public float attackRange = 2f;
     float nextAttackTime = 0f;
+
 
     void Update()
     {
@@ -20,10 +22,14 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, Mathf.Infinity))
             {
-                //Attack();
-                animator.SetTrigger("Attack");
-                enemyController.TakeDamage(GameManager.Instance.attackDamage);
-                nextAttackTime = Time.time + 1f / attackRate;
+                if (Vector3.Distance(transform.position, enemy.transform.position) <= attackRange && enemy != null)
+                {
+                    //Attack();
+                    animator.SetTrigger("Attack");
+                    enemyController.TakeDamage(GameManager.Instance.attackDamage);
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
+
             }
         }
     }

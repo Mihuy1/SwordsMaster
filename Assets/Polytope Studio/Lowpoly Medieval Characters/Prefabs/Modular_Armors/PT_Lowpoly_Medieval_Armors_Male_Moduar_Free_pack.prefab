@@ -5994,7 +5994,6 @@ GameObject:
   - component: {fileID: 981991349}
   - component: {fileID: 981991345}
   - component: {fileID: 981991346}
-  - component: {fileID: 981991347}
   m_Layer: 7
   m_Name: PT_Lowpoly_Medieval_Armors_Male_Moduar_Free_pack
   m_TagString: Enemy
@@ -6090,8 +6089,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.2659936, z: 1}
-  m_Center: {x: 0, y: 0.63299656, z: 0}
+  m_Size: {x: 0.5930605, y: 1.8003039, z: 0.48804474}
+  m_Center: {x: -0.035776615, y: 0.95118177, z: 0.031939507}
 --- !u!195 &981991346
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6114,29 +6113,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &981991347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6880901488789346670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a07951e7d8d8ba14f9cc6aa74f62b6a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xp: {fileID: 0}
-  _player: {fileID: 0}
-  healthbar: {fileID: 1648764080}
-  agent: {fileID: 981991346}
-  coinManager: {fileID: 0}
-  maxHealth: 100
-  currenthealth: 0
-  range: 10
-  attackrange: 2.5
-  startTimeBtwAttack: 1
-  stoppingDistance: 2
 --- !u!1 &7091185167530504810
 GameObject:
   m_ObjectHideFlags: 0

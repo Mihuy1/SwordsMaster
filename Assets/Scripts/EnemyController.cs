@@ -76,7 +76,7 @@ public class EnemyController : MonoBehaviour
     {
         if (timeBtwAttack <= 0)
         {
-            _player.TakeDamage(0);
+            _player.TakeDamage(15);
             /*healthbar.SetHealth(_player.currentHealth);*/
             Debug.Log("Attacking");
 
