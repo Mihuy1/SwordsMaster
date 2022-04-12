@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRate = 2f;
     public float attackRange = 2f;
-    public float angle;
+    public float distance;
     float nextAttackTime = 0f;
 
 
@@ -25,15 +25,19 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
+        distance = Vector3.Distance(transform.position, enemy.transform.position);
 
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetMouseButtonDown(0) && Physics.Raycast(transform.position, transform.forward, Mathf.Infinity))
+            if (Input.GetMouseButtonDown(0))
             {
+                if(distance <= attackRange)
+                {
                     //Attack();
                     animator.SetTrigger("Attack");
                     enemyController.TakeDamage(GameManager.Instance.attackDamage);
 
+                }
             }
         }
     }
