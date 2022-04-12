@@ -10,12 +10,20 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
      void Update()
     {
-      if (Input.GetMouseButtonDown(0))
+        if(Time.time >= nextAttackTime)
         {
-            Attack();
-        }  
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
+ 
     }
 
     public void Attack()
