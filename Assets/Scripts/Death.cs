@@ -16,6 +16,7 @@ public class Death : MonoBehaviour
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
+        
     }
 
     public void NewGame()
