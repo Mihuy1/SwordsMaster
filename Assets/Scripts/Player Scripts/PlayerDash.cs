@@ -6,37 +6,39 @@ public class PlayerDash : MonoBehaviour
 {
     public Vector3 moveDirection;
 
-    public const float maxDashTime = 1.0f;
+    public const float maxDashTime = 6.0f;
     public float dashDistance = 10;
-    public float dashStoppingSpeed = 0.1f;
-    float currentDashTime = maxDashTime;
+    public bool dash;
+
+    float currentDashTime;
     float dashSpeed = 6;
+
     public CharacterController controller;
 
 
-
-    private void Awake()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2")) //Right mouse button
-        {
-            currentDashTime = 0;
-        }
-        if (currentDashTime < maxDashTime)
+
+        if (Input.GetMouseButtonDown(1) && !dash)
         {
             moveDirection = transform.forward * dashDistance;
-            currentDashTime += dashStoppingSpeed;
+            controller.Move(moveDirection * Time.deltaTime * dashSpeed);
+            currentDashTime = 0;
+            dash = true;
+        }
+
+    }
+    void FixedUpdate()
+    {
+        if (currentDashTime < maxDashTime && dash)
+        {
+            currentDashTime += Time.deltaTime;
         }
         else
         {
             moveDirection = Vector3.zero;
+            dash = false;
         }
-        controller.Move(moveDirection * Time.deltaTime * dashSpeed);
     }
 }
 

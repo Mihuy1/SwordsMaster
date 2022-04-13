@@ -1630,7 +1630,7 @@ MonoBehaviour:
   enemy: {fileID: 1563815157}
   player: {fileID: 194123745}
   attackRate: 2
-  attackRange: 3.16
+  attackRange: 3.07
   distance: 0
 --- !u!114 &194123744
 MonoBehaviour:
@@ -1679,8 +1679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0, z: 0}
-  dashDistance: 10
-  dashStoppingSpeed: 0.1
+  dashDistance: 20
+  dash: 0
   controller: {fileID: 313752876}
 --- !u!1001 &203554688
 PrefabInstance:
@@ -6149,7 +6149,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136385240}
-  m_LocalRotation: {x: 0.19559965, y: -0.000000019586682, z: -0.0000000055168905, w: 0.98068386}
+  m_LocalRotation: {x: 0.19559965, y: 0.000000019586682, z: 0.000000005516891, w: 0.98068386}
   m_LocalPosition: {x: -1.16, y: 4.238526, z: 3.6538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6522,7 +6522,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318482751}
-  m_LocalRotation: {x: 0.20984975, y: 0.000000018808972, z: -0.000000004036946, w: 0.9777337}
+  m_LocalRotation: {x: 0.20984975, y: -0.000000018808976, z: 0.0000000040369463, w: 0.9777337}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
