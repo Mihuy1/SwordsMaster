@@ -19,7 +19,7 @@ public class PlayerDash : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(1) && !dash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !dash)
         {
             moveDirection = transform.forward * dashDistance;
             controller.Move(moveDirection * Time.deltaTime * dashSpeed);
