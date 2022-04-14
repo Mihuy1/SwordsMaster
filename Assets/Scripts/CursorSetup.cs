@@ -6,8 +6,8 @@ public class CursorSetup : MonoBehaviour
 {
     private void Awake()
     {
-        // Cursr lock.
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //// Cursr lock.
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 }

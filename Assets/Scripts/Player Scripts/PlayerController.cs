@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
-    public Shop shopScript;
 
     Vector3 velocity;
     public LayerMask groundMask;
@@ -16,10 +15,10 @@ public class PlayerController : MonoBehaviour
     public float groundDistance = 0.4f;
     public float turnSmoothTime = 0.1f;
 
-    public float speed;
+    public float speed = 12;
     public float sprintSpeed;
 
-    public float gravity = -9.81f;
+    public float gravity = -9.81f * 2;
     public float jumpHeight = 1f;
 
     public int maxHealth = 100;
@@ -43,44 +42,23 @@ public class PlayerController : MonoBehaviour
         }
 
         // Player Movement code
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector3 move = transform.right * x + transform.forward * z;
 
-        if (direction.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
-
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
-
-
-        }
-
-        // Sprint code
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = sprintSpeed;
-        }
-        else
-        {
-            speed = 6f;
-        }
-
-        // Jump code
+        controller.Move(move * speed * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
+
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
     }
 
     void Start()
