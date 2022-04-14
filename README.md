@@ -1,2 +1,2 @@
 # SwordsMaster
-hack &amp; slash third-person 3d game with puzzles.
+hack &amp; slash first-person 3d game
