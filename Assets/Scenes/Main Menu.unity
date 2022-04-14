@@ -2676,7 +2676,7 @@ MonoBehaviour:
 
     Movement: WASD
 
-    Dash: Right-click
+    Dash: LeftShift
 
     Jump:
     Space'
