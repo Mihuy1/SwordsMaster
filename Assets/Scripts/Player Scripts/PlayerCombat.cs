@@ -25,8 +25,12 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        distance = Vector3.Distance(transform.position, enemy.transform.position);
+        Debug.DrawRay(transform.position, Vector3.forward * distance);
 
+        distance = Vector3.Distance(transform.position, enemy.transform.position);
+        
+        if(Physics.Raycast(player.position,enemy.transform.forward, out var hit, Mathf.Infinity))
+        {
         if (Time.time >= nextAttackTime)
         {
             if (Input.GetMouseButtonDown(0))
@@ -42,6 +46,7 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
+}
 
 
     public void Attack()

@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
+    public Shop shopScript;
+
     Vector3 velocity;
     public LayerMask groundMask;
     public Transform groundCheck;
@@ -30,16 +32,8 @@ public class PlayerController : MonoBehaviour
     public HealthBar healthbar;
     public Death deathScript;
 
-    public bool playerDied = false;
-
-
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            TakeDamage(20);
-        }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -117,6 +111,4 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-   
 }
