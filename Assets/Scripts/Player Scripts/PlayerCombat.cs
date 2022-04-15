@@ -31,9 +31,10 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if(distance <= attackRange)
+                animator.SetTrigger("Attack");
+
+                if (distance <= attackRange)
                 {
-                    animator.SetTrigger("Attack");
                     enemyController.TakeDamage(GameManager.Instance.attackDamage);
                     nextAttackTime = Time.time + 1f / attackRate;
 
