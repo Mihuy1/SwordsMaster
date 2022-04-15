@@ -9,17 +9,20 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
     public EnemyController enemyController;
     public GameObject enemy;
+    public GameObject Sword;
     public Transform player;
 
     public float attackRate = 2f;
     public float attackRange = 2f;
     public float distance;
+
     float nextAttackTime = 0f;
 
 
      void Start()
     {
         player = GetComponent<Transform>();
+        animator = Sword.GetComponent<Animator>();
     }
 
     void Update()
@@ -32,7 +35,6 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 animator.SetTrigger("Attack");
-
                 if (distance <= attackRange)
                 {
                     enemyController.TakeDamage(GameManager.Instance.attackDamage);
