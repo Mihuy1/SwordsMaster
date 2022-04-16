@@ -36,13 +36,13 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 animator.SetTrigger("Attack");
+                AudioSource source = GetComponent<AudioSource>();
+                source.PlayOneShot(attackSound);
                 nextAttackTime = Time.time + 1f / attackRate;
 
                 if (distance <= attackRange)
                 {
-                    enemyController.TakeDamage(GameManager.Instance.attackDamage);
-                    AudioSource source = GetComponent<AudioSource>();
-                    source.PlayOneShot(attackSound);
+                    //enemyController.TakeDamage(GameManager.Instance.attackDamage);
                     nextAttackTime = Time.time + 1f / attackRate;
 
                 }
