@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
+    public AudioClip attackSound;
 
     public LayerMask enemyLayers;
     public EnemyController enemyController;
@@ -35,9 +36,13 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 animator.SetTrigger("Attack");
+                nextAttackTime = Time.time + 1f / attackRate;
+
                 if (distance <= attackRange)
                 {
                     enemyController.TakeDamage(GameManager.Instance.attackDamage);
+                    AudioSource source = GetComponent<AudioSource>();
+                    source.PlayOneShot(attackSound);
                     nextAttackTime = Time.time + 1f / attackRate;
 
                 }
