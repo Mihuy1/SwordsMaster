@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
+    EnemyController enemyController;
+
     public Vector3 moveDirection;
 
     public const float maxDashTime = 6.0f;
@@ -15,6 +17,11 @@ public class PlayerDash : MonoBehaviour
 
     public CharacterController controller;
 
+
+     void Start()
+    {
+        enemyController = GetComponent<EnemyController>();
+    }
 
     void Update()
     {
