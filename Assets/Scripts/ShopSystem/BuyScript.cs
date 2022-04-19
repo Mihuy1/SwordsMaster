@@ -6,6 +6,8 @@ public class BuyScript : MonoBehaviour
 {
     PlayerCombat playerCombat;
 
+    public GameObject notEnoughCoins;
+
     public bool[] booleans;
 
     private int damageCost;
@@ -16,7 +18,7 @@ public class BuyScript : MonoBehaviour
     {
         damageCost = 5;
         healthCost = 7;
-        damageAmount = 2;
+        damageAmount = 5;
     }
 
     public void GiveDamage()
@@ -29,9 +31,15 @@ public class BuyScript : MonoBehaviour
 
             booleans[0] = true;
             Debug.Log("Damage ostos meni läpi!");
-        } else
+        } else if (booleans[0] != true)
         {
-            Debug.Log("Damage ostokseen ei riitä rahaa!");
+            // Tähän koodi joka pistää tekstin näyttöön päälle
+
+            Debug.Log("Ei riitä rahaa damage upgradeen!");
+        } else if (booleans[0] == true)
+        {
+            // Tähän koodi joka pistää tekstin näyttöön päälle
+            Debug.Log("Olet jo ostanut damage upgraden!");
         }
     }
 }
