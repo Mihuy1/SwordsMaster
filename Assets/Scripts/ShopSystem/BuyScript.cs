@@ -1,24 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BuyScript : MonoBehaviour
 {
     PlayerCombat playerCombat;
 
-    public GameObject notEnoughCoins;
-
     public bool[] booleans;
 
     private int damageCost;
-    private int healthCost;
+    //private int healthCost;
     private int damageAmount;
+    private int sec;
 
      void Start()
     {
         damageCost = 5;
-        healthCost = 7;
+        //healthCost = 7;
         damageAmount = 5;
+        sec = 5;
     }
 
     public void GiveDamage()
@@ -36,6 +37,7 @@ public class BuyScript : MonoBehaviour
             // Tähän koodi joka pistää tekstin näyttöön päälle
 
             Debug.Log("Ei riitä rahaa damage upgradeen!");
+            
         } else if (booleans[0] == true)
         {
             // Tähän koodi joka pistää tekstin näyttöön päälle

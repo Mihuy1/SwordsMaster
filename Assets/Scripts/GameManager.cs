@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int coins;
     public int attackDamage = 20;
     public TextMeshProUGUI coinAmountText;
+    public GameObject notEnoughCoins;
 
     void Awake()
     {
