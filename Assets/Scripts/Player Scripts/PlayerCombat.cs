@@ -28,11 +28,11 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        if (enemy != null)
-            distance = Vector3.Distance(transform.position, enemy.transform.position);
+        //if (enemy != null)
+        //    distance = Vector3.Distance(transform.position, enemy.transform.position);
 
-        else
-            return;
+        //else
+        //    return;
        
         if (Time.time >= nextAttackTime)
         {
