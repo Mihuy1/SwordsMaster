@@ -12,14 +12,12 @@ public class BuyScript : MonoBehaviour
     private int damageCost;
     //private int healthCost;
     private int damageAmount;
-    private int sec;
 
      void Start()
     {
         damageCost = 5;
         //healthCost = 7;
         damageAmount = 5;
-        sec = 5;
     }
 
     public void GiveDamage()
