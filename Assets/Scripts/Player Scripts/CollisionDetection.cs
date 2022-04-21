@@ -14,7 +14,8 @@ public class CollisionDetection : MonoBehaviour
         {
             Instantiate(hitParticle, new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z), other.transform.rotation);
             Debug.Log(other.name);
-            enemyController.TakeDamage(GameManager.Instance.attackDamage);
+            other.GetComponent<EnemyController>().TakeDamage(GameManager.Instance.attackDamage);
+            //enemyController.TakeDamage(GameManager.Instance.attackDamage);
             
         }
     }
