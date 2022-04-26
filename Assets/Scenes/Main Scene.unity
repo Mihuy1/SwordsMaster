@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6236356, g: 0.6938766, b: 0.78748035, a: 1}
+  m_IndirectSpecularColor: {r: 0.6251363, g: 0.6954416, b: 0.78916824, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -228,7 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904d13dfecbda824793cb3ef306eace2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 1378644695}
+  enemies:
+  - {fileID: 6880901489076181634}
+  - {fileID: 870644790}
 --- !u!4 &24297819
 Transform:
   m_ObjectHideFlags: 0
@@ -7826,12 +7828,12 @@ GameObject:
   - component: {fileID: 870644793}
   - component: {fileID: 870644792}
   m_Layer: 7
-  m_Name: Enemy (1)
+  m_Name: Enemy_firstWave2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &870644791
 Transform:
   m_ObjectHideFlags: 0
@@ -7901,7 +7903,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2.5
+  m_StoppingDistance: 2.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -7947,7 +7949,7 @@ MonoBehaviour:
   range: 8
   attackrange: 2
   startTimeBtwAttack: 1
-  stoppingDistance: 2.5
+  stoppingDistance: 2
 --- !u!95 &870644796
 Animator:
   serializedVersion: 3
@@ -9834,7 +9836,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 5000
-  field of view: 47.8
+  field of view: 66.5
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9879,7 +9881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276bddead5892d44a8f2f7d392c30836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 10
+  mouseSensitivity: 90.6
   playerBody: {fileID: 313752875}
 --- !u!1 &1152431985
 GameObject:
@@ -10908,7 +10910,7 @@ MonoBehaviour:
   range: 8
   attackrange: 2
   startTimeBtwAttack: 1
-  stoppingDistance: 2.5
+  stoppingDistance: 2
 --- !u!195 &1314696987
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11256,7 +11258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1378644696
 Transform:
   m_ObjectHideFlags: 0
@@ -22855,12 +22857,12 @@ GameObject:
   - component: {fileID: 1314696987}
   - component: {fileID: 3105273555143782560}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Enemy_firstWave
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7034923137017041767
 Transform:
   m_ObjectHideFlags: 0

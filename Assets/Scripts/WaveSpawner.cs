@@ -78,22 +78,22 @@ public class WaveSpawner : MonoBehaviour
             return true;
         }
 
-    IEnumerator SpawnWave (Wave _wave)
+        IEnumerator SpawnWave (Wave _wave)
 
     {
             Debug.Log("Spawning wave " + _wave.name);
 
-        state = SpawnState.spawning;
+            state = SpawnState.spawning;
 
-        for(int i = 0; i < _wave.count;i++)
-        {
-            SpawnEnemy(_wave.enemy);
-            yield return new WaitForSeconds(1f / _wave.rate);
-        }
+            for(int i = 0; i < _wave.count;i++)
+            {
+                SpawnEnemy(_wave.enemy);
+                yield return new WaitForSeconds(1f / _wave.rate);
+            }
 
-        state = SpawnState.waiting;
+            state = SpawnState.waiting;
 
-        yield break;
+            yield break;
     }
 
     void SpawnEnemy(Transform _enemy)
