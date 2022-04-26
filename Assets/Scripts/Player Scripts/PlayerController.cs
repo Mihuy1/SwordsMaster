@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
 
     public HealthBar healthbar;
     public Death deathScript;
+    public Transform Player;
+
+    
 
     void Update()
     {
@@ -63,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+
         speed = 6f;
         sprintSpeed = 10f;
 

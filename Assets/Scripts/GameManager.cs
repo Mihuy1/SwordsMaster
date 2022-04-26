@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         coinAmountText.text = "" + coins;
+
+        
     }
 
 
