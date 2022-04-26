@@ -17,22 +17,8 @@ public class WaveSystem : MonoBehaviour
        if (other.CompareTag("Player") && _firstWave == false)
         {
             enemies.SetActive(true);
-            _firstWave = true;
             Debug.Log("First wave started!");
             // Joku teksti näyttöön mahdollisesti
-        }
-    }
-
-     void Update()
-    {
-        if (_firstWave == true)
-        {
-            Debug.Log("First wave ended!");
-
-            // Teksti, että on voittanut:
-
-            // Lisätään coineja:
-            
         }
     }
 }
