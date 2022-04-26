@@ -5,6 +5,7 @@ using TMPro;
 
 public class AddCoins : MonoBehaviour
 {
+    public static AddCoins Instance { get; set;}
 
     [SerializeField] private EnemyController enemyController;
 
@@ -17,6 +18,13 @@ public class AddCoins : MonoBehaviour
         GameManager.Instance.coins += GameManager.Instance.rewardAmount;
         GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
         Debug.Log(GameManager.Instance.coins);
+    }
+
+    public void CustomAmountOfCoins(int coins)
+    {
+        GameManager.Instance.coins += coins;
+        GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
+        Debug.Log("Sait palkan:" + coins);
     }
 
 }

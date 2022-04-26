@@ -28,7 +28,11 @@ public class WaveSystem : MonoBehaviour
         if (_firstWave == true)
         {
             Debug.Log("First wave ended!");
-            // Joku teksti näyttöön mahdollisesti
+
+            // Teksti, että on voittanut:
+
+            // Lisätään coineja:
+            
         }
     }
 }
