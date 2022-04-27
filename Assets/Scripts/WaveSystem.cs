@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaveSystem : MonoBehaviour
 {
     public GameObject[] enemies;
+    public AddCoins coinManager;
     private bool _firstWave;
 
      void Awake()
@@ -14,10 +15,11 @@ public class WaveSystem : MonoBehaviour
 
      void Update()
     {
-        if (enemies[0] == null && enemies[1] == null)
+        if (enemies[0] == null && enemies[1] == null && _firstWave == false)
         {
-            Debug.Log("FIRST WAVE ENDED!");
+            Debug.Log("first wave ended");
             _firstWave = true;
+            coinManager.CustomAmountOfCoins(20);
         }
     }
 

@@ -25,6 +25,8 @@ public class EnemyController : MonoBehaviour
 
     private float timeBtwAttack;
 
+    public int damage;
+
     public void Start()
     {
         currenthealth = maxHealth;
@@ -76,7 +78,7 @@ public class EnemyController : MonoBehaviour
     {
         if (timeBtwAttack <= 0)
         {
-            _player.TakeDamage(30);
+            _player.TakeDamage(damage);
             /*healthbar.SetHealth(_player.currentHealth);*/
             Debug.Log("Attacking");
 

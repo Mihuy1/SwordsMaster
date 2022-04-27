@@ -24,7 +24,6 @@ public class AddCoins : MonoBehaviour
     {
         GameManager.Instance.coins += coins;
         GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
-        Debug.Log("Sait palkan:" + coins);
     }
 
 }
