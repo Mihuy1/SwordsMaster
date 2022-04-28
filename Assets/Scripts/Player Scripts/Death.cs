@@ -12,7 +12,7 @@ public class Death : MonoBehaviour
     public void TurnOnScreen()
     {
         DeathScreen.SetActive(true);
-        Time.timeScale = 1;
+        Time.timeScale = 0;
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;

@@ -7,10 +7,12 @@ public class WaveSystem : MonoBehaviour
     public GameObject[] enemies;
     public AddCoins coinManager;
     private bool _firstWave;
+    private bool _secondWave;
 
      void Awake()
     {
         _firstWave = false;
+        _secondWave = false;
     }
 
      void Update()
@@ -21,6 +23,8 @@ public class WaveSystem : MonoBehaviour
             _firstWave = true;
             coinManager.CustomAmountOfCoins(20);
         }
+
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -35,6 +39,7 @@ public class WaveSystem : MonoBehaviour
     {
         enemies[0].SetActive(true);
         enemies[1].SetActive(true);
+        enemies[2].SetActive(true);
         Debug.Log("First wave started!");
     }
 }
