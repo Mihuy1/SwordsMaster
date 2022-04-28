@@ -6,30 +6,28 @@ public class WaveSystem : MonoBehaviour
 {
     public GameObject[] enemies;
     public AddCoins coinManager;
-    private bool _firstWave;
-    private bool _secondWave;
+
+    public bool _wave1;
 
      void Awake()
     {
-        _firstWave = false;
-        _secondWave = false;
+        _wave1 = false;
     }
 
      void Update()
     {
-        if (enemies[0] == null && enemies[1] == null && _firstWave == false)
+        if (enemies[0] == null && enemies[1] == null && _wave1 == false)
         {
             Debug.Log("first wave ended");
-            _firstWave = true;
+           _wave1 = true;
             coinManager.CustomAmountOfCoins(20);
+            Debug.Log("Your bonus: 20");
         }
-
-        
     }
 
     void OnTriggerEnter(Collider other)
     {
-       if (other.CompareTag("Player") && _firstWave == false)
+       if (other.CompareTag("Player") && _wave1 == false)
         {
             ActivateWave();
         }

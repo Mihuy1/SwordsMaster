@@ -39,6 +39,7 @@ public class EnemyController : MonoBehaviour
 
     public void Update()
     {
+
         if (Vector3.Distance(transform.position, target.position) <= range)
         {
             agent.SetDestination(target.position);
