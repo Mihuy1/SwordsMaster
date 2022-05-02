@@ -16,7 +16,7 @@ public class WaveSystem : MonoBehaviour
 
      void Update()
     {
-        if (enemies[0] == null && enemies[1] == null && _wave1 == false)
+        if (enemies[0] == null && enemies[1] == null && enemies[2] == null && _wave1 == false)
         {
             Debug.Log("first wave ended");
            _wave1 = true;
