@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private PlayerController _player;
     [SerializeField] private HealthBar healthbar;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private Animator anim;
 
     public AddCoins coinManager;
     private Transform target;
@@ -22,10 +23,10 @@ public class EnemyController : MonoBehaviour
     public float attackrange;
     public float startTimeBtwAttack;
     public float stoppingDistance;
+    public int damage;
+    public bool dead;
 
     private float timeBtwAttack;
-
-    public int damage;
 
     public void Start()
     {
@@ -35,17 +36,19 @@ public class EnemyController : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         timeBtwAttack = startTimeBtwAttack;
 
+        dead = false;
+
     }
 
     public void Update()
     {
 
-        if (Vector3.Distance(transform.position, target.position) <= range)
+        if (Vector3.Distance(transform.position, target.position) <= range && dead == false)
         {
             agent.SetDestination(target.position);
         }
 
-        if (Vector3.Distance(transform.position, target.position) < stoppingDistance)
+        if (Vector3.Distance(transform.position, target.position) < stoppingDistance && dead == false)
         {
             transform.position = this.transform.position;
             Attack();
@@ -67,7 +70,9 @@ public class EnemyController : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
+
+        anim.SetBool("Dead", true);
+        dead = true;
         xp.levelSystem.AddExperience(110);
 
         _player.currentHealth = 100;
@@ -80,8 +85,7 @@ public class EnemyController : MonoBehaviour
         if (timeBtwAttack <= 0)
         {
             _player.TakeDamage(damage);
-            /*healthbar.SetHealth(_player.currentHealth);*/
-            Debug.Log("Attacking");
+            anim.SetTrigger("Attack");
 
             timeBtwAttack = startTimeBtwAttack;
         }
