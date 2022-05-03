@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6251363, g: 0.6954416, b: 0.78916824, a: 1}
+  m_IndirectSpecularColor: {r: 0.6236356, g: 0.6938766, b: 0.78748035, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1466,6 +1466,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 20
+  dead: 0
 --- !u!195 &39183611
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2392,6 +2393,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 30
+  dead: 0
 --- !u!95 &70963490
 Animator:
   serializedVersion: 3
@@ -10081,6 +10083,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 30
+  dead: 0
 --- !u!95 &324481492
 Animator:
   serializedVersion: 3
@@ -21553,6 +21556,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 30
+  dead: 0
 --- !u!95 &758191998
 Animator:
   serializedVersion: 3
@@ -24035,6 +24039,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 20
+  dead: 0
 --- !u!95 &870644796
 Animator:
   serializedVersion: 3
@@ -30368,7 +30373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276bddead5892d44a8f2f7d392c30836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 99.87
+  mouseSensitivity: 25.1
   playerBody: {fileID: 313752875}
 --- !u!1 &1137143809
 GameObject:
@@ -34233,6 +34238,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 20
+  dead: 0
 --- !u!195 &1314696987
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35893,6 +35899,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 30
+  dead: 0
 --- !u!95 &1376669802
 Animator:
   serializedVersion: 3
@@ -45860,6 +45867,7 @@ MonoBehaviour:
   startTimeBtwAttack: 1
   stoppingDistance: 2
   damage: 30
+  dead: 0
 --- !u!95 &1775143015
 Animator:
   serializedVersion: 3

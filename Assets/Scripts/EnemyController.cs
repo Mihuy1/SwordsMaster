@@ -77,6 +77,7 @@ public class EnemyController : MonoBehaviour
 
         _player.currentHealth = 100;
         _player.healthbar.SetHealth(_player.currentHealth);
+        Destroy(gameObject, 1.75f);
 
     }
 
