@@ -46,10 +46,12 @@ public class EnemyController : MonoBehaviour
         if (Vector3.Distance(transform.position, target.position) <= range && dead == false)
         {
             agent.SetDestination(target.position);
+            anim.SetBool("Running", true);
         }
 
         if (Vector3.Distance(transform.position, target.position) < stoppingDistance && dead == false)
         {
+            anim.SetBool("Running", false);
             transform.position = this.transform.position;
             Attack();
         }
