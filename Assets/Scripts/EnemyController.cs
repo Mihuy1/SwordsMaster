@@ -59,6 +59,7 @@ public class EnemyController : MonoBehaviour
     {
         currenthealth -= damage;
         healthbar.SetHealth(currenthealth);
+        anim.SetTrigger("Hurt");
 
         if (currenthealth <= 0)
         {
