@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     public float turnSmoothTime = 0.1f;
 
     public float speed = 12;
-    public float sprintSpeed;
 
     public float gravity = -9.81f * 2;
     public float jumpHeight = 1f;
@@ -68,7 +67,6 @@ public class PlayerController : MonoBehaviour
     {
 
         speed = 6f;
-        sprintSpeed = 10f;
 
         currentHealth = maxHealth;
 
