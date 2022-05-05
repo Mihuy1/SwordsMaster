@@ -56,7 +56,6 @@ public class EnemyController : MonoBehaviour
             Attack();
         }
     }
-
         public void TakeDamage(int damage)
     {
         currenthealth -= damage;
@@ -68,21 +67,17 @@ public class EnemyController : MonoBehaviour
             coinManager.AddingCoins();
             Die();
         }
-
     }
 
     public void Die()
     {
-
         anim.SetBool("Dead", true);
         dead = true;
         xp.levelSystem.AddExperience(110);
         Destroy(gameObject, 1f);
 
-        _player.currentHealth = 100;
+        _player.currentHealth = maxHealth;
         _player.healthbar.SetHealth(_player.currentHealth);
-        
-
     }
 
     public void Attack()

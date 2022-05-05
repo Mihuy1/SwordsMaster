@@ -31,7 +31,7 @@ public class Shop : MonoBehaviour
 
     public void TurnOffShop()
     {
-        shopMenu?.SetActive(false);
+        shopMenu.SetActive(false);
 
         Time.timeScale = 1;
 

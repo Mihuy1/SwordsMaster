@@ -40,21 +40,5 @@ public class BuyScript : MonoBehaviour
         {
             Debug.Log("You have already bought damage upgrade before!");
         }
-    }
-
-    public void GiveHealth()
-    {
-        if (GameManager.Instance.coins >= healthCost && booleans[1] != true)
-        {
-            GameManager.Instance.coins -= damageCost;
-            GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
-
-            playerController.maxHealth = 110;
-            Debug.Log(playerController.currentHealth);
-
-            booleans[1] = true;
-            Debug.Log("Health upgrade went through!");
-            // Play a sound to player to know it went through.
-        }
     } 
 }
