@@ -62,6 +62,13 @@ public class EnemyController : MonoBehaviour
         healthbar.SetHealth(currenthealth);
         anim.SetTrigger("Hurt");
 
+        if (_player.currentHealth != _player.maxHealth)
+        {
+            _player.currentHealth += 5;
+            _player.healthbar.SetHealth(_player.currentHealth);
+        }
+
+
         if (currenthealth <= 0)
         {
             coinManager.AddingCoins();
@@ -76,8 +83,8 @@ public class EnemyController : MonoBehaviour
         xp.levelSystem.AddExperience(110);
         Destroy(gameObject, 1f);
 
-        _player.currentHealth = maxHealth;
-        _player.healthbar.SetHealth(_player.currentHealth);
+        //_player.currentHealth = maxHealth;
+        //_player.healthbar.SetHealth(_player.currentHealth);
     }
 
     public void Attack()

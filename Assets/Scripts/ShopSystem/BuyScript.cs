@@ -31,7 +31,7 @@ public class BuyScript : MonoBehaviour
             GameManager.Instance.attackDamage += damageAmount;
 
             booleans[0] = true;
-            Debug.Log("Damage Upgrade went through!");
+            Debug.Log("Damage Upgrade went through!"  + GameManager.Instance.attackDamage);
         } else if (booleans[0] != true)
         {
             Debug.Log("Not enough coins");
