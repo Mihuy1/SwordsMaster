@@ -17,7 +17,7 @@ public class WaveSystem_Wave2 : MonoBehaviour
 
     void Update()
     {
-        if (enemies[0] == null && enemies[1] == true && enemies[2] && enemies[3] && _wave2 == false)
+        if (enemies[0] == null && enemies[1] == true && enemies[2] && enemies[3])
         {
             _wave2 = true;
             coinManager.CustomAmountOfCoins(20);

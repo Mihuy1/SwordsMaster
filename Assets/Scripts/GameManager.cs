@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int rewardAmount = 5;
     public int coins;
     public int attackDamage = 20;
+    public int deathLifeSteal = 0;
 
     public TextMeshProUGUI coinAmountText;
     public GameObject notEnoughCoins;

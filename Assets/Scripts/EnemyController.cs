@@ -64,7 +64,7 @@ public class EnemyController : MonoBehaviour
 
         if (_player.currentHealth != _player.maxHealth)
         {
-            _player.currentHealth += 5;
+            _player.currentHealth += 10;
             _player.healthbar.SetHealth(_player.currentHealth);
         }
 
@@ -83,8 +83,7 @@ public class EnemyController : MonoBehaviour
         xp.levelSystem.AddExperience(110);
         Destroy(gameObject, 1f);
 
-        //_player.currentHealth = maxHealth;
-        //_player.healthbar.SetHealth(_player.currentHealth);
+        _player.currentHealth += GameManager.Instance.deathLifeSteal;
     }
 
     public void Attack()

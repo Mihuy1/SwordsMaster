@@ -12,14 +12,17 @@ public class BuyScript : MonoBehaviour
 
     private int damageCost;
     private int damageAmount;
-    private int healthCost;
-    private int healthAmount;
+
+    private int lifeStealCost;
+    private int lifeStealAmount;
 
      void Start()
     {
         damageCost = 10;
-        healthCost = 25;
         damageAmount = 5;
+
+        lifeStealCost = 50;
+        lifeStealAmount = 15;
     }
 
     public void GiveDamage()
@@ -40,5 +43,24 @@ public class BuyScript : MonoBehaviour
         {
             Debug.Log("You have already bought damage upgrade before!");
         }
-    } 
+    }
+    
+    public void LifeSteal()
+    {
+        if (GameManager.Instance.coins >= lifeStealCost && booleans[1] != true)
+        {
+            GameManager.Instance.coins -= lifeStealCost;
+            GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
+            GameManager.Instance.deathLifeSteal += lifeStealAmount;
+
+            booleans[1] = true;
+            Debug.Log("Life Steal is now: " + GameManager.Instance.deathLifeSteal);
+        } else if (booleans[1] != true)
+        {
+            Debug.Log("Not enough coins!");
+        } else if (booleans[1] == true)
+        {
+            Debug.Log("You have already bought lifesteal upgrade before!");
+        }
+    }
 }

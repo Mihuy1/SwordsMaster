@@ -17,7 +17,6 @@ public class AddCoins : MonoBehaviour
     {
         GameManager.Instance.coins += GameManager.Instance.rewardAmount;
         GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
-        Debug.Log(GameManager.Instance.coins);
     }
 
     public void CustomAmountOfCoins(int coins)

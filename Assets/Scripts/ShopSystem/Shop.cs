@@ -6,15 +6,28 @@ public class Shop : MonoBehaviour
 {
     public static Shop Instance { get; private set; }
 
-    EnemyController enemyController;
+    public PlayerCombat playerCombat;
+
     public GameObject shopMenu;
 
+    private bool _shopToggled;
 
-     void Update()
+    private void Start()
+    {
+        _shopToggled = false;
+    }
+
+
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
             TurnOffShop();
+        }
+
+        if (_shopToggled == true)
+        {
+            playerCombat.source.Pause();
         }
     }
 
@@ -26,7 +39,6 @@ public class Shop : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
-        Debug.Log("Shop turned on!");
     }
 
     public void TurnOffShop()
@@ -38,15 +50,16 @@ public class Shop : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        Debug.Log("Shop turned off!");
+        playerCombat.source.Play();
+        _shopToggled = false;
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            _shopToggled = true;
             TurnOnShop();
-            Debug.Log("Collider triggered, shop on!");
         }
     }
 
@@ -54,8 +67,8 @@ public class Shop : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            _shopToggled = false;
             TurnOffShop();
-            Debug.Log("Collider triggered, shop off!");
         }
     }
 }

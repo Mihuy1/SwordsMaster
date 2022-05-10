@@ -43,6 +43,13 @@ public class PlayerController : MonoBehaviour
             velocity.y = -2f;
         }
 
+        // Don't let health go over max amount.
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+            healthbar.SetHealth(currentHealth);
+        }
+
         // Player Movement code
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
