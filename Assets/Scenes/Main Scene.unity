@@ -2504,7 +2504,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   Sword: {fileID: 3905049047252880895}
   player: {fileID: 313752875}
-  source: {fileID: 0}
+  source: {fileID: 313752881}
   attackRate: 2
   attackRange: 2.5
   distance: 5
@@ -9285,7 +9285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276bddead5892d44a8f2f7d392c30836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 39.5
+  mouseSensitivity: 21.2
   playerBody: {fileID: 313752875}
 --- !u!4 &1159746995 stripped
 Transform:
