@@ -6,7 +6,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public GameObject Canvas;
+    private GameObject Canvas;
 
     public int rewardAmount = 5;
     public int coins;
@@ -14,18 +14,15 @@ public class GameManager : MonoBehaviour
     public int deathLifeSteal = 0;
 
     public TextMeshProUGUI coinAmountText;
-    public GameObject notEnoughCoins;
 
-    void Awake()
+    private void Start()
     {
-
         if (Instance == null) { Instance = this; } else if (Instance != this) { Destroy(this); }
         DontDestroyOnLoad(gameObject);
 
         coinAmountText.text = "" + coins;
 
-        Canvas.SetActive(true);
+        Canvas = GameObject.Find("MainCanvas");
     }
-
 
 }
