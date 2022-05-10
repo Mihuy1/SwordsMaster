@@ -8449,7 +8449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1001856544}
   - component: {fileID: 1001856545}
-  - component: {fileID: 1001856546}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8469,7 +8468,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1001856545
 MonoBehaviour:
@@ -8490,21 +8489,6 @@ MonoBehaviour:
   deathLifeSteal: 0
   coinAmountText: {fileID: 827167840}
   notEnoughCoins: {fileID: 0}
---- !u!114 &1001856546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001856543}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 290a7a9fd09a05a42bde2dd4d1137e35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves: []
-  timeBetweenWaves: 5
-  waveCountDown: 0
 --- !u!1 &1003014869
 GameObject:
   m_ObjectHideFlags: 0
@@ -13994,7 +13978,7 @@ RectTransform:
   - {fileID: 1565677931}
   - {fileID: 146834736}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

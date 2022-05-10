@@ -17,11 +17,12 @@ public class WaveSystem_Wave2 : MonoBehaviour
 
     void Update()
     {
-        if (enemies[0] == null && enemies[1] == true && enemies[2] && enemies[3])
+        if (enemies[0] == null && enemies[1] == null && enemies[2] == null && enemies[3] == null && _wave2 == false)
         {
             _wave2 = true;
             coinManager.CustomAmountOfCoins(20);
             Debug.Log("Second wave ended!");
+            Debug.Log("You got second wave reward!");
         }
     }
 
