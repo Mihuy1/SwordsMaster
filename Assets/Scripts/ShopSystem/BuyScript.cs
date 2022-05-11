@@ -71,9 +71,9 @@ public class BuyScript : MonoBehaviour
     }
     public void GiveDamage2()
     {
-        if (GameManager.Instance.coins >= damageCost && booleans[2] != true)
+        if (GameManager.Instance.coins >= damageCost2 && booleans[2] != true)
         {
-            GameManager.Instance.coins -= damageCost;
+            GameManager.Instance.coins -= damageCost2;
             GameManager.Instance.coinAmountText.text = "" + GameManager.Instance.coins;
             GameManager.Instance.attackDamage += damageAmount2;
 

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public AudioSource click;
+    public AudioSource bgMusic;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        bgMusic.Play();
     }
 
     public void QuitGame()
