@@ -26,4 +26,11 @@ public class GameManager : MonoBehaviour
         Canvas = GameObject.Find("MainCanvas");
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log(attackDamage);
+        }
+    }
 }
