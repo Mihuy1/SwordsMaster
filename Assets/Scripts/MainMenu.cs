@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource click;
+
     private void Start()
     {
         // Make sure cursor is unlocked and visible.
@@ -21,5 +23,10 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void ClickSound()
+    {
+        click.Play();
     }
 }
