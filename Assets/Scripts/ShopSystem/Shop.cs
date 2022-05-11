@@ -10,6 +10,8 @@ public class Shop : MonoBehaviour
 
     public GameObject shopMenu;
 
+    public GameObject crosshair;
+
     private bool _shopToggled;
 
     private void Start()
@@ -23,6 +25,7 @@ public class Shop : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             TurnOffShop();
+            crosshair.SetActive(true);
         }
 
         if (_shopToggled == true)
@@ -34,6 +37,7 @@ public class Shop : MonoBehaviour
     public void TurnOnShop()
     {
         shopMenu.SetActive(true);
+        crosshair.SetActive(false);
         Time.timeScale = 0;
 
         Cursor.visible = true;

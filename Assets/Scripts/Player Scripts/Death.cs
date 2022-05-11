@@ -7,11 +7,12 @@ public class Death : MonoBehaviour
 {
 
     public GameObject DeathScreen;
-    PlayerController playerController;
+    public GameObject crosshair;
 
     public void TurnOnScreen()
     {
         DeathScreen.SetActive(true);
+        crosshair.SetActive(false);
         Time.timeScale = 0;
 
         Cursor.visible = true;
@@ -29,5 +30,10 @@ public class Death : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
         Time.timeScale = 1;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
