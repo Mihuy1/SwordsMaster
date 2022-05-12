@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour
 
     public PlayerCombat playerCombat;
     public WaveSystem_Wave2 waveSystem2;
+    public WaveSystem_Wave3 waveSystem3;
+    public WaveSystem_Wave4 waveSystem4;
 
     public AddCoins coinManager;
     private Transform target;
@@ -29,6 +31,7 @@ public class EnemyController : MonoBehaviour
     public int damage;
     public bool dead;
     public bool addedHealth;
+    public bool addedHealth2;
 
     private float timeBtwAttack;
 
@@ -65,17 +68,23 @@ public class EnemyController : MonoBehaviour
         {
             maxHealth = 150;
             currenthealth = maxHealth;
-            addedHealth = true;
             healthbar.SetHealth(maxHealth);
-        } else
+
+            addedHealth = true;
+        }
+        
+        if (waveSystem4.firstWave == true && addedHealth2 == false)
         {
-            return;
+            maxHealth = 200;
+            currenthealth = maxHealth;
+            healthbar.SetHealth(currenthealth);
+
+            addedHealth2 = true;
         }
         
     }
         public void TakeDamage(int damage)
     {
-        Debug.Log(maxHealth);
         currenthealth -= damage;
         healthbar.SetHealth(currenthealth);
         anim.SetTrigger("Hurt");
@@ -83,7 +92,6 @@ public class EnemyController : MonoBehaviour
         if (_player.currentHealth != _player.maxHealth)
         {
             _player.currentHealth += playerCombat.lifeSteal;
-            Debug.Log("lifesteal amount" + playerCombat.lifeSteal);
             _player.healthbar.SetHealth(_player.currentHealth);
         }
 

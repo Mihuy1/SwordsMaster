@@ -11,15 +11,12 @@ public class Teleport : MonoBehaviour
 
     bool tped = false;
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (waveSystem._thirdWave == true && tped == false)
+        if (other.CompareTag("Player") && waveSystem._thirdWave != false)
         {
             player.transform.position = location.position;
             tped = true;
-        } else
-        {
-            return;
         }
     }
 }

@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int coins;
     public int attackDamage = 20;
     public int deathLifeSteal = 0;
+    public int healAmount;
 
     public TextMeshProUGUI coinAmountText;
 

@@ -41,6 +41,9 @@ public class DifficultySelector : MonoBehaviour
         // Player stats:
         upgradeController.lifeStealAmount = 15;
         playerCombat.lifeSteal = 13;
+
+        //Pick-up heal:
+        GameManager.Instance.healAmount = 30;
         
     }
 
@@ -60,6 +63,9 @@ public class DifficultySelector : MonoBehaviour
         upgradeController.lifeStealAmount = 11;
         playerCombat.lifeSteal = 8;
         GameManager.Instance.attackDamage = 10;
+
+        // Pick-up heal:
+        GameManager.Instance.healAmount = 20;
 
     }
 
@@ -81,6 +87,9 @@ public class DifficultySelector : MonoBehaviour
         GameManager.Instance.attackDamage = 7;
         Debug.Log("Player damage: " + GameManager.Instance.attackDamage);
         Debug.Log(upgradeController.lifeStealAmount);
+
+        // Pick-up heal:
+        GameManager.Instance.healAmount = 12;
     }
 
     public void ClickSound()
