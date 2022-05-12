@@ -16,10 +16,11 @@ public class BuyScript : MonoBehaviour
     private int damageCost2;
     private int damageAmount2;
 
-    private int lifeStealCost;
-    private int lifeStealAmount;
+    public int lifeStealCost;
+    public int lifeStealAmount;
 
-     void Start()
+
+    void Start()
     {
         damageCost = 10;
         damageAmount = 5;
@@ -28,7 +29,7 @@ public class BuyScript : MonoBehaviour
         damageAmount2 = 10;
 
         lifeStealCost = 50;
-        lifeStealAmount = 15;
+        //lifeStealAmount = 15; Declared by DifficultySelector.cs
     }
 
     public void GiveDamage()

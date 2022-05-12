@@ -18,6 +18,8 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 2f;
     public float distance;
 
+    public int lifeSteal;
+
     float nextAttackTime = 0f;
 
 

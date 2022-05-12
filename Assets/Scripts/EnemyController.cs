@@ -13,6 +13,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator anim;
 
+    public PlayerCombat playerCombat;
+    public WaveSystem_Wave2 waveSystem2;
+
     public AddCoins coinManager;
     private Transform target;
 
@@ -25,11 +28,13 @@ public class EnemyController : MonoBehaviour
     public float stoppingDistance;
     public int damage;
     public bool dead;
+    public bool addedHealth;
 
     private float timeBtwAttack;
 
     public void Start()
     {
+
         currenthealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
 
@@ -55,16 +60,30 @@ public class EnemyController : MonoBehaviour
             transform.position = this.transform.position;
             Attack();
         }
+
+        if (waveSystem2._wave2 == true && addedHealth == false)
+        {
+            maxHealth = 150;
+            currenthealth = maxHealth;
+            addedHealth = true;
+            healthbar.SetHealth(maxHealth);
+        } else
+        {
+            return;
+        }
+        
     }
         public void TakeDamage(int damage)
     {
+        Debug.Log(maxHealth);
         currenthealth -= damage;
         healthbar.SetHealth(currenthealth);
         anim.SetTrigger("Hurt");
 
         if (_player.currentHealth != _player.maxHealth)
         {
-            _player.currentHealth += 10;
+            _player.currentHealth += playerCombat.lifeSteal;
+            Debug.Log("lifesteal amount" + playerCombat.lifeSteal);
             _player.healthbar.SetHealth(_player.currentHealth);
         }
 

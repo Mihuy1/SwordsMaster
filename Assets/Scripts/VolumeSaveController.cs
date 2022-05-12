@@ -7,9 +7,11 @@ using System;
 
 public class VolumeSaveController : MonoBehaviour
 {
+
     [SerializeField] public Slider volumeSlider = null;
 
     [SerializeField] public TextMeshProUGUI volumeTextUI = null;
+
 
     private void Start()
     {
@@ -34,4 +36,5 @@ public class VolumeSaveController : MonoBehaviour
         volumeSlider.value = volumeValue;
         AudioListener.volume = volumeValue;
     }
+
 }

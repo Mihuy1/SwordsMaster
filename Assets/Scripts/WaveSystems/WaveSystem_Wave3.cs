@@ -8,7 +8,7 @@ public class WaveSystem_Wave3 : MonoBehaviour
     public AddCoins coinManager;
     public GameObject[] enemies;
 
-    private bool _thirdWave;
+    public bool _thirdWave;
 
 
      void Start()

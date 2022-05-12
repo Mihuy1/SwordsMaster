@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
+    public AudioSource click;
 
     public GameObject DeathScreen;
     public GameObject crosshair;
@@ -35,5 +36,10 @@ public class Death : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ClickSound()
+    {
+        click.Play();
     }
 }

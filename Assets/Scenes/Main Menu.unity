@@ -531,6 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   click: {fileID: 1715890229}
   bgMusic: {fileID: 0}
+  toggle: 0
 --- !u!1 &435625049
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +994,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f1cd4aece7f2fd34a9e71d7ec67eb051, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.123
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2806,7 +2807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.245781, y: -118.01669}
+  m_AnchoredPosition: {x: 2.245781, y: -203}
   m_SizeDelta: {x: 431.0182, y: 127.5591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499647688

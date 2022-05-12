@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
     private GameObject Canvas;
+    public GameObject DifficultyUI;
 
     public int rewardAmount = 5;
     public int coins;
@@ -16,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI coinAmountText;
 
-    private void Start()
+    private void Awake()
     {
         if (Instance == null) { Instance = this; } else if (Instance != this) { Destroy(this); }
         DontDestroyOnLoad(gameObject);
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
         coinAmountText.text = "" + coins;
 
         Canvas = GameObject.Find("MainCanvas");
+        DifficultyUI.SetActive(true);
     }
 
     public void Update()

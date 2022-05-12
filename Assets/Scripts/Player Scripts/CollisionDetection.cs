@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CollisionDetection : MonoBehaviour
 {
-    public EnemyController enemyController;
     public PlayerCombat playerCombat;
     public GameObject hitParticle;
 
@@ -15,6 +14,7 @@ public class CollisionDetection : MonoBehaviour
             Instantiate(hitParticle, new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z), other.transform.rotation);
 
             other.GetComponent<EnemyController>().TakeDamage(GameManager.Instance.attackDamage);
+
             
         }
     }
