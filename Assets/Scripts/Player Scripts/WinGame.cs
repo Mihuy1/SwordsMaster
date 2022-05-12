@@ -18,13 +18,11 @@ public class WinGame : MonoBehaviour
     private void Update()
     {
         // Check if last enemies are alive: Show Game Win panel.
-        if (waveSystem4.thirdBoss == true)
-        {
-            GameWon();
-        }
+        
+            
     }
 
-    void GameWon()
+    public void GameWon()
     {
         WinGameUI.SetActive(true);
         Time.timeScale = 0;

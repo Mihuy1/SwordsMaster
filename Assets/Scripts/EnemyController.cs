@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
     public void Update()
     {
 
-        if (Vector3.Distance(transform.position, target.position) <= range && dead == false)
+        if (Vector3.Distance(transform.position, target.position) <= range && dead == false && agent != null)
         {
             agent.SetDestination(target.position);
             anim.SetBool("Running", true);
@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
 
         if (waveSystem2._wave2 == true && addedHealth == false)
         {
-            maxHealth = 150;
+            maxHealth = 130;
             currenthealth = maxHealth;
             healthbar.SetHealth(maxHealth);
 
@@ -75,7 +75,7 @@ public class EnemyController : MonoBehaviour
         
         if (waveSystem4.firstWave == true && addedHealth2 == false)
         {
-            maxHealth = 200;
+            maxHealth = 140;
             currenthealth = maxHealth;
             healthbar.SetHealth(currenthealth);
 

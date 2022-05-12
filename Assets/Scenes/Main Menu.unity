@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 1715890229}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 530091442}
   toggle: 0
 --- !u!1 &435625049
 GameObject:
@@ -992,9 +992,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f1cd4aece7f2fd34a9e71d7ec67eb051, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.123
+  m_audioClip: {fileID: 8300000, guid: 2be54793bef64b4498bcab20742714db, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.102
   m_Pitch: 1
   Loop: 0
   Mute: 0
