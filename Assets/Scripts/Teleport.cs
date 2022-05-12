@@ -9,11 +9,17 @@ public class Teleport : MonoBehaviour
     public GameObject player;
     public Transform location;
 
+    bool tped = false;
+
     private void Update()
     {
-        if (waveSystem._thirdWave == true)
+        if (waveSystem._thirdWave == true && tped == false)
         {
             player.transform.position = location.position;
+            tped = true;
+        } else
+        {
+            return;
         }
     }
 }

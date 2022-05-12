@@ -100,6 +100,7 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("Dead", true);
         dead = true;
         xp.levelSystem.AddExperience(110);
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         Destroy(gameObject, 1f);
 
         _player.currentHealth += GameManager.Instance.deathLifeSteal;
