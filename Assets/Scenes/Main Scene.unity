@@ -4825,6 +4825,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8031339192871210686, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
   m_PrefabInstance: {fileID: 308715900}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &312751015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3596748220834623885, guid: 917e00053cb499241a1d42e2b2716532, type: 3}
+  m_PrefabInstance: {fileID: 1091859200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &313752874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8900,6 +8905,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569982362}
   m_CullTransparentMesh: 1
+--- !u!1 &576910598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3596748220834623885, guid: 917e00053cb499241a1d42e2b2716532, type: 3}
+  m_PrefabInstance: {fileID: 1323425174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &577718151
 GameObject:
   m_ObjectHideFlags: 0
@@ -8944,7 +8954,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSystem3: {fileID: 1310922056}
-  enemies: []
+  enemies:
+  - {fileID: 1932148783}
+  - {fileID: 1759157727}
+  - {fileID: 312751015}
+  - {fileID: 576910598}
+  - {fileID: 1479474166}
+  - {fileID: 1917924617}
   _wave4: 0
   firstWave: 0
   firstBoss: 0
@@ -21301,6 +21317,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2, type: 3}
   m_PrefabInstance: {fileID: 1474710647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1479474166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3596748220834623885, guid: 917e00053cb499241a1d42e2b2716532, type: 3}
+  m_PrefabInstance: {fileID: 852957663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1482748094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24857,6 +24878,11 @@ Transform:
   m_Father: {fileID: 1569601522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1759157727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3596748220834623885, guid: 917e00053cb499241a1d42e2b2716532, type: 3}
+  m_PrefabInstance: {fileID: 552823905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1763633187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27416,6 +27442,11 @@ MonoBehaviour:
   WinGameUI: {fileID: 628324}
   crosshair: {fileID: 146834735}
   waveSystem4: {fileID: 577718153}
+--- !u!1 &1917924617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3596748220834623885, guid: 917e00053cb499241a1d42e2b2716532, type: 3}
+  m_PrefabInstance: {fileID: 157970299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1925153641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27630,6 +27661,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8031339192871210686, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
   m_PrefabInstance: {fileID: 1928161945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1932148783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3596748220834623885, guid: 917e00053cb499241a1d42e2b2716532, type: 3}
+  m_PrefabInstance: {fileID: 2117437486}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1949531251
 PrefabInstance:
