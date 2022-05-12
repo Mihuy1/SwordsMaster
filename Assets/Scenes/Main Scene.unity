@@ -6609,8 +6609,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 12.206252, z: 58.16046}
-  m_Center: {x: 0, y: 5.603126, z: 6.8704147}
+  m_Size: {x: 8.115644, y: 12.206252, z: 58.16046}
+  m_Center: {x: 3.5578222, y: 5.603126, z: 6.8704147}
 --- !u!114 &389093049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9080,8 +9080,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.933548, y: 7.6992774, z: 60.78409}
-  m_Center: {x: 0.966774, y: 3.3496382, z: -1.8799934}
+  m_Size: {x: 4.4461823, y: 7.6992774, z: 60.78409}
+  m_Center: {x: 1.7230911, y: 3.3496382, z: -1.8799934}
 --- !u!1001 &578426883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13039,7 +13039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1d8b3ce70b980645b4aa1e32dfe6e9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.059991
+      value: 41.41
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1d8b3ce70b980645b4aa1e32dfe6e9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13047,7 +13047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1d8b3ce70b980645b4aa1e32dfe6e9d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.0801525
+      value: -14.37
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1d8b3ce70b980645b4aa1e32dfe6e9d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13808,8 +13808,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.933548, y: 7.6992774, z: 60.78409}
-  m_Center: {x: 0.966774, y: 3.3496382, z: -1.8799934}
+  m_Size: {x: 11.381332, y: 7.6992774, z: 60.78409}
+  m_Center: {x: 5.190666, y: 3.3496382, z: -1.8799934}
 --- !u!114 &902436525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19493,8 +19493,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 11.987964, z: 58.500587}
-  m_Center: {x: 0, y: 5.493982, z: 2.5674047}
+  m_Size: {x: 8.874382, y: 11.987964, z: 58.500587}
+  m_Center: {x: 3.937191, y: 5.493982, z: 2.5674057}
 --- !u!114 &1310922056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25877,8 +25877,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 77.73307, y: 7.5540953, z: 1}
-  m_Center: {x: -24.470142, y: 3.2770476, z: 0}
+  m_Size: {x: 77.73307, y: 7.5540953, z: 6.1739874}
+  m_Center: {x: -24.470142, y: 3.2770476, z: 2.5869937}
 --- !u!114 &1780355495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27924,7 +27924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WinGameUI: {fileID: 628324}
   crosshair: {fileID: 146834735}
-  waveSystem4: {fileID: 577718153}
+  waveSystem5: {fileID: 902436525}
 --- !u!1001 &1925153641
 PrefabInstance:
   m_ObjectHideFlags: 0

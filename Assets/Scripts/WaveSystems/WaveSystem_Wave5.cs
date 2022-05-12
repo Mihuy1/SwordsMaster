@@ -14,13 +14,8 @@ public class WaveSystem_Wave5 : MonoBehaviour
 
     private void Update()
     {
-        if (waveSystem4.firstWave == true && enemies[0] && enemies[1] && enemies[2])
+        if (waveSystem4._wave4 == true && enemies[0] && enemies[1] && enemies[2] == null)
             wave5 = true;
-
-        if (enemies[0] && enemies[1] && enemies[2] == null && wave5 != false)
-        {
-            won.GameWon();
-        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -8,18 +8,21 @@ public class WinGame : MonoBehaviour
     public GameObject WinGameUI;
     public GameObject crosshair;
 
-    public WaveSystem_Wave4 waveSystem4;
+    public WaveSystem_Wave5 waveSystem5;
 
     private void Start()
     {
         //waveSystem4 = GetComponent<WaveSystem_Wave4>();
     }
 
-    private void Update()
+    public void Update()
     {
         // Check if last enemies are alive: Show Game Win panel.
+        if (waveSystem5.wave5 == true)
+        {
+            GameWon();
+        }
         
-            
     }
 
     public void GameWon()
