@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
 
         if (waveSystem2._wave2 == true && addedHealth == false)
         {
-            maxHealth = 130;
+            maxHealth = 140;
             currenthealth = maxHealth;
             healthbar.SetHealth(maxHealth);
 
@@ -75,7 +75,7 @@ public class EnemyController : MonoBehaviour
         
         if (waveSystem4.firstWave == true && addedHealth2 == false)
         {
-            maxHealth = 140;
+            maxHealth = 150;
             currenthealth = maxHealth;
             healthbar.SetHealth(currenthealth);
 
