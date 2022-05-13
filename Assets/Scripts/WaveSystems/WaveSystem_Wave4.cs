@@ -9,13 +9,21 @@ public class WaveSystem_Wave4 : MonoBehaviour
     public GameObject[] enemies;
 
     public bool _wave4;
-    public bool firstWave;
 
     private void Start()
     {
         _wave4 = false;
-        firstWave = false;
     }
+
+    private void Update()
+    {
+        if (enemies[0] == null && enemies[1] == null && enemies[2] == null && _wave4 == false)
+        {
+            _wave4 = true;
+            Debug.Log("Forth wave ended!");
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -31,9 +39,6 @@ public class WaveSystem_Wave4 : MonoBehaviour
             enemies[0].SetActive(true);
             enemies[1].SetActive(true);
             enemies[2].SetActive(true);
-
-            if (enemies[0] && enemies[1] && enemies[2] == null)
-            _wave4 = true;
         }
     }
 }

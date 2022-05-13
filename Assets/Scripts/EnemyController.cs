@@ -73,7 +73,7 @@ public class EnemyController : MonoBehaviour
             addedHealth = true;
         }
         
-        if (waveSystem4.firstWave == true && addedHealth2 == false)
+        if (waveSystem4._wave4 == true && addedHealth2 == false)
         {
             maxHealth = 150;
             currenthealth = maxHealth;

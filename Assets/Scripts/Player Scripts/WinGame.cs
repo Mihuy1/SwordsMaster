@@ -17,10 +17,10 @@ public class WinGame : MonoBehaviour
 
     public void Update()
     {
-        // Check if last enemies are alive: Show Game Win panel.
-        if (waveSystem5.wave5 == true)
+        if (waveSystem5.gameWon == true)
         {
             GameWon();
+            Debug.Log("Show game win panel");
         }
         
     }

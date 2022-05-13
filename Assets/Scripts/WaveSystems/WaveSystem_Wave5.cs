@@ -11,11 +11,15 @@ public class WaveSystem_Wave5 : MonoBehaviour
     public GameObject[] enemies;
 
     public bool wave5 = false;
+    public bool gameWon = false;
 
     private void Update()
     {
-        if (waveSystem4._wave4 == true && enemies[0] && enemies[1] && enemies[2] == null)
-            wave5 = true;
+        if (waveSystem4._wave4 == true && enemies[0] == null && enemies[1] == null && enemies[2] == null)
+        {
+            gameWon = true;
+            Debug.Log("game ended");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
